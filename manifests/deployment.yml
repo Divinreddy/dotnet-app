@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: azooinmyluggagedotnetapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: azooinmyluggagedotnetapp 
+    spec:
+      containers:
+        - name: azooinmyluggagedotnetapp 
+          image: builddemo.azurecr.io/azooinmyluggagedotnetapp 
+          ports:
+          - containerPort: 80
